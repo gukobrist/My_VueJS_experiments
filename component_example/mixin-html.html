@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div id="app">
+        <div id="container">
+            <h1 class="text-center">{{ title }}</h1>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-2">
+                    <my-comp1 class="comp1"></my-comp1>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="text-center">Or</h2>
+                </div>
+                <div class="col-md-3">
+                    <my-comp2 class="comp2"></my-comp2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const myButton = {
+        methods: {
+            pressed(val) {
+                alert(val);
+            }
+        },
+        data() {
+            return {
+                item: ''
+            }
+        }
+    }
+    const comp1 = {
+        template: `
+            <div>
+            <h1>Введите email</h1>
+            <form>
+                <div class="form-group">
+                    <input v-model="item" type="email" class="form-control" placeholder="email address">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-lg" @click.prevent="pressed(item)">Нажмина кнопку</button>
+                </div>
+            </form>
+            </div>
+        `,
+        mixins: [myButton]
+    }
+    const comp2 = {
+        template: `
+            <div>
+            <h1>Введите телефон</h1>
+            <form>
+                <div class="form-group">
+                    <input v-model="item" class="form-control" placeholder="phone number">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-lg" @click.prevent="pressed(item)">Нажмина кнопку 2</button>
+                </div>
+            </form>
+            </div>
+        `,
+        mixins: [myButton]
+    }
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                title: 'Mixin in example using two components'
+            }
+        },
+        components: {
+            myComp1: comp1,
+            myComp2: comp2
+        }
+    })
+</script>
+</html>

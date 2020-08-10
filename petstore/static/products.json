@@ -5,7 +5,7 @@
       "title": "Дилдо 'Радужный единорог'",
       "description": "Разноцветный сказочный жеребец. <em>Для тех кто в теме. </em> Кто не в теме тот пидр",
       "price": 2000,
-      "image": "assets/images/61430.jpg",
+      "image": "static/61430.jpg",
       "availableInventory": 10,
       "rating": 1
     },
@@ -14,7 +14,7 @@
       "title": "Дилдо 'Блэк Павер'",
       "description": "В основном используется как средство самообороны. <em>Иногда для пыток</em>",
       "price": 299,
-      "image": "assets/images/black_power.jpg",
+      "image": "static/black_power.jpg",
       "availableInventory": 7,
       "rating": 1
     },
@@ -23,7 +23,7 @@
       "title": "Дилдо 'Шалун'",
       "description": "Не стесняйся, бери шалуна. <em>Шалун - лучший друг в доме</em>",
       "price": 1100,
-      "image": "assets/images/malenkiy.jpg",
+      "image": "static/malenkiy.jpg",
       "availableInventory": 99,
       "rating": 4
     },
@@ -32,7 +32,7 @@
       "title": "Дилдо 'Сухопаренький'",
       "description": "Как буд-то твой бывший. <em> Который умер</em>",
       "price": 799,
-      "image": "assets/images/suhoi.jpg",
+      "image": "static/suhoi.jpg",
       "availableInventory": 11,
       "rating": 5
     },
@@ -41,7 +41,7 @@
       "title": "Дилдо 'На крючке'",
       "description": "Легко попасться на крючек, но совсем не просто с него слезть. <em> Может цепляться за губу</em>",
       "price": 4999,
-      "image": "assets/images/kruk.jpg",
+      "image": "static/kruk.jpg",
       "availableInventory": 25,
       "rating": 1
     }
