@@ -47,11 +47,11 @@
 
 <script>
 import MyHeader from "./Header";
+import {mapGetters} from 'vuex';
 export default {
   name: "imain",
   data () {
     return {
-      products: {},
       cart: []
     };
   },
@@ -83,6 +83,9 @@ export default {
     }
   },
   computed: {
+    ...mapGetters([
+      'products'
+               ]),
     cartItemCount() {
       return this.cart.length || '';
     },
@@ -98,7 +101,7 @@ export default {
         }
         return productsArray.sort(compare);
       }
-    }
+    },
   },
   filters: {
     formatPrice(price) {
@@ -120,10 +123,7 @@ export default {
     }
   },
   created: function() {
-    axios.get('/static/products.json').then(response => {
-      this.products = response.data.products;
-      console.log(this.products);
-    });
+    this.$store.dispatch('initStore');
   }
 };
 </script>

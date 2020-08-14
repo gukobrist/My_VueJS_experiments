@@ -1,0 +1,34 @@
+{
+  "name": "my_nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nuxt.js project",
+  "author": "Romashov Aleksey <amromashov@gmail.com>",
+  "scripts": {
+    "build": "nuxt build",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "precommit": "npm run lint",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "nuxt": "^2.0.0",
+    "vuetify": "^2.3.8"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-vuetify": "~2.0.7",
+    "vuetify-loader": "^1.3.0"
+  }
+}
